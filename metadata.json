@@ -1,0 +1,8 @@
+{
+  "name": "VỞ BÀI TẬP THÔNG MINH",
+  "description": "Ứng dụng chuyển đổi tài liệu học tập thành bài tập tương tác thông minh cho giáo viên và học sinh.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "collections": {
+    "users": {
+      "description": "User profiles for teachers",
+      "documents": {
+        "${userId}": {
+          "fields": {
+            "email": { "type": "string" },
+            "displayName": { "type": "string" },
+            "role": { "type": "string", "description": "teacher" },
+            "createdAt": { "type": "timestamp" }
+          }
+        }
+      }
+    },
+    "assignments": {
+      "description": "Assignments created by teachers",
+      "documents": {
+        "${assignmentId}": {
+          "fields": {
+            "teacherId": { "type": "string" },
+            "title": { "type": "string" },
+            "subject": { "type": "string" },
+            "grade": { "type": "string" },
+            "questions": { "type": "array" },
+            "settings": { "type": "map" },
+            "status": { "type": "string", "description": "draft | published | closed" },
+            "createdAt": { "type": "timestamp" },
+            "updatedAt": { "type": "timestamp" }
+          }
+        }
+      }
+    },
+    "submissions": {
+      "description": "Student submissions for assignments",
+      "documents": {
+        "${submissionId}": {
+          "fields": {
+            "assignmentId": { "type": "string" },
+            "studentName": { "type": "string" },
+            "studentId": { "type": "string" },
+            "answers": { "type": "array" },
+            "score": { "type": "number" },
+            "totalQuestions": { "type": "number" },
+            "correctCount": { "type": "number" },
+            "submittedAt": { "type": "timestamp" },
+            "isGraded": { "type": "boolean" },
+            "feedback": { "type": "string" }
+          }
+        }
+      }
+    }
+  }
+}
